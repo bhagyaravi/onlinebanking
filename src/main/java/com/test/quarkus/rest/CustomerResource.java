@@ -23,7 +23,11 @@ public class CustomerResource {
 	    public String hello() {
 	        return "hello customer";
 	    }
-	    
+	    @GET
+	    @Produces(MediaType.APPLICATION_JSON)
+	    public Response getAllCustomers() {
+	        return Response.ok(Customer.findAll()).build();
+	    }
 	    
 	    @POST
 	    @Path("/create")
