@@ -27,7 +27,7 @@ public class CustomerResource {
 	    @Path("/list")
 	    @Produces(MediaType.APPLICATION_JSON)
 	    public Response getAllCustomers() {
-	        return Response.ok(Customer.findAll()).build();
+	        return Response.ok(Customer.listAll()).build();
 	    }
 	    
 	    @POST
