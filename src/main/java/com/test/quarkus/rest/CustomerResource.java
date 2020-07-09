@@ -24,6 +24,7 @@ public class CustomerResource {
 	        return "hello customer";
 	    }
 	    @GET
+	    @Path("/list")
 	    @Produces(MediaType.APPLICATION_JSON)
 	    public Response getAllCustomers() {
 	        return Response.ok(Customer.findAll()).build();
